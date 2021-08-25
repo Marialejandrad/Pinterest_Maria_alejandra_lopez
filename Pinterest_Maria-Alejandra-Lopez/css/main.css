@@ -1,0 +1,465 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.Barra_De_Navegacion{
+    position:fixed;
+    z-index: 2;
+    display: flex;
+    height: 80px; /*alto*/
+    width: 100vw; /*ancho*/
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+}
+
+.Barra_Navegacion{
+    display:flex;
+    align-items: center;
+    height:56px;
+    width: 100%;
+}
+.icono img{
+    width: 24px;
+    height: 24px;
+}
+
+.icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:4px;
+    width: 48px;
+    height: 48px;
+}
+
+.Barra_De_Navegacion .Boton{
+    width: auto;
+    height: 48px;
+    display:flex;
+    align-items: center;
+    padding: 0px 16px; /*boder*/
+    background: white;
+    color: black; /*color de letra*/
+    font-family: Helvetica, sans-serif; /*tipo de letra*/
+    font-weight: bolder; /*Negrilla*/
+    font-size: 16px; /*Tamaño de letra*/
+    border-radius: 25px;
+    cursor: pointer; /*Para que se ponga la manito del cursosr*/
+
+}
+
+.Boton:hover{ /*pasa por el y hace tal cosa*/
+    background-color: rgb(225,225,225);
+}
+
+.Boton:active{/*si le hundo hago tal cosa*/
+    background-color: black;
+    color: white;
+}
+
+.Barra_De_Navegacion .Buscador{
+    display:flex;
+    align-items: center;
+    padding: 0px 0px 0px 16px;
+    border-radius: 25px;
+    background-color: rgb(225,225,225);
+    width: 100%;
+    height: 48px;
+
+}
+
+.Buscador img{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+
+}
+
+.Buscador input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.Barra_De_Navegacion .Boton2{
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    cursor: pointer;
+
+}
+
+.Boton2>svg{/*toma el que esta adentro en este caso svg*/
+    width: 24px;
+    height: 24px;
+    fill: #767676;
+
+}
+
+.Boton2:hover{
+    background-color: rgb(225,225,225);
+}
+
+.Boton2>svg:active{
+    fill: #000000;
+}
+
+.Boton2 .Perfil{
+    height: 24px;
+    width: 24px;
+    border-radius:24px;
+    overflow: hidden; /*lo que se salga de la caja se oculta*/
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Boton2 .Perfil img{
+    height: 100%;
+    width: auto;
+
+}
+
+.Barra_De_Navegacion .Boton3{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.Boton3>svg{/*toma el que esta adentro en este caso svg*/
+    
+    fill: #767676;
+
+}
+
+.Boton3:hover{
+    background-color: rgb(225,225,225);
+}
+
+.Boton3>svg:active{
+    fill: #000000;
+}
+
+.grid{
+    margin-top: 80px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.grid_content{
+    width: 90%;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*dividir en 5 partes*/
+    /*grid-template-rows: repeat(5,auto);
+    grid-gap: 20px*/
+    columns: 5;
+}
+
+.grid_content .imagen{
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    overflow: hidden;
+    
+}
+
+.imagen img{
+    width: 100%;
+    height: auto;
+    border-radius:25px;
+
+}
+.contenedor{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.detalles{
+    position: absolute;
+    display:flex;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    opacity:0;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .detalles:hover{
+    opacity: 1; 
+  
+  }
+  .detalles .Guardar{
+    width: 100%;
+    height: 32px;
+  
+  }
+  .detalles .abajo{
+    position: absolute;
+    justify-content: space-between;
+    bottom: 10px;
+    width: 100%;
+    height: 32px;
+    display: flex;
+  
+  }
+  .boton_Detalle1{
+    position: absolute;
+    height: 32px;
+    width: 60px;
+    right: 15px;
+    top: 10px;
+    padding:10px 14px;
+    border-radius:25px;
+    background-color: rgba(255, 0, 0, 0.6);
+    font-size: 14px;
+    color:white;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .abajo .boton_Detalle4{
+    width: auto;
+    display: flex;
+    align-items: center;
+    left:5px;
+    padding: 0 16px;
+    background-color: white;
+    color: black;
+    height: 28px;
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .boton_Detalle4>svg{
+    height: 12px;
+    width: 12px;
+    left: 4px;
+  }
+  .boton_Detalle2{
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    height: 28px;
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .Detallederecha{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    right: 1px;
+  }
+
+  .Barra_De_Navegacion_2{
+      display:none;
+  }
+
+  .grid_content_2{
+      display:none;
+  }
+
+  @media(max-width:600px){
+    .grid_content{
+          columns: 2 !important;
+    }
+    .imagen img{
+        border-radius: 8px;
+    }
+    .Barra_De_Navegacion{
+        display: none;
+    }
+    .Barra_De_Navegacion_2{
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 120px;
+        padding: 0px 16px;
+        align-items: center;
+        background-color: white;
+    }
+    .Barra_De_Navegacion_2 .Barra_Navegacion_2{
+        display:flex;
+        align-items: left;
+        height: 130px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Barra_De_Navegacion_2 .Barra_Navegacion_2 .top{
+        display:flex;
+        width: 90vw;
+        padding: 0px 0px 10px 0px;
+    }
+
+    .Barra_Navegacion_2 .Buscador{
+        display:flex;
+        align-items: center;
+        padding: 0px 0px 0px 16px;
+        border-radius: 10px;
+        background-color: rgb(225,225,225);
+        width: 100%;
+        height: 38px;
+    }
+
+   .Buscador img{
+        position: relative;
+        width: 16px;
+        height: 16px;
+        /*margin-right: 16px;*/
+
+    }
+
+    .Buscador input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: rgba(0,0,0,0);
+    }   
+    .cruz{
+        width: 48px;
+        height: 38px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 24px;
+        cursor: pointer;
+    }
+    .cruz>svg{
+        width: 24px;
+        height: 24px;
+        fill: #767676;
+    }
+
+    .cruz:hover{
+        background-color:rgb(225,225,225);
+    }
+
+    .cruz>svg:active{
+        fill: #000000;
+    }
+    .Barra_De_Navegacion2 .Barra_Navegacion_2 .bottom{
+        display:flex;
+    }
+    
+    .Barra_De_Navegacion_2 .boton{
+        width: auto;
+        height: 48px;
+        padding: 0px 16px;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 25px;
+        background-color: white;
+        color:black;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .boton:hover{
+        background-color:rgb(225,225,225);
+    }
+    
+    .boton:active{
+        background-color:black;
+        color: white;
+    }
+
+    .grid{
+        margin-top: 130px;
+    }  
+
+    .grid_content_2{
+        position: fixed;
+        z-index: 2;
+        display:flex;
+        bottom:0;
+        left:0;
+        width:100vw;
+        height: 50px;
+        padding:0px 16px;
+        align-items: center;
+        background-color: white;
+        justify-content: space-between;
+    }
+    .botones_abajo{
+        width: 48px;
+        height: 48px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 24px;
+        cursor: pointer;
+    }
+    .botones_abajo>svg{
+        width: 24px;
+        height: 24px;
+        fill: #767676;
+    }
+    .botones_abajo:hover{
+        background-color: rgb(225, 225, 225);
+
+    }
+    .botones_abajo>svg:active{
+        fill: #000000;
+
+    }
+    .botones_abajo .Perfil{
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        
+        justify-content: center;
+    }
+    .botones_abajo .Perfil img{
+        height: 100%;
+        width: auto;
+    }
+    
+    
+}
+
+ 
+
+
